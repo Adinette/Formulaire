@@ -9,6 +9,7 @@ const personne = ref({
   email: "",
   contact: "",
   cours: "",
+  salade: "",
 });
 
 const submitForm = () => {
