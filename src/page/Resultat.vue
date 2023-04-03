@@ -10,12 +10,12 @@
   </div>
 </template>
 
-<script script >
-import { usePersonneStore } from '../stores/personne';
+<script setup>
+import { usePersonneStore } from "../stores/personne";
 
-const personneStore = usePersonneStore();
+const personneStore = usePersonneStore()
 
-const personne = personneStore.getPersonne
+const personne = personneStore.getPersonne;
 
 console.log(personne);;
 </script>
