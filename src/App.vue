@@ -3,8 +3,10 @@
 </template>
 
 <script>
+import { createPinia } from 'pinia';
 import Dashbord from "./layout/Dashbord.vue";
 export default {
+  
   components: {
     Dashbord
   }

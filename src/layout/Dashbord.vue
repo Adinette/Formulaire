@@ -1,15 +1,13 @@
 <template>
+  <div class="p-2">
   <Header />
-  <router-view></router-view>
+    <router-view></router-view>
+  </div>
 </template>
 
-<script>
+<script setup>
 import Header from "../components/Header.vue";
-export default {
-  components: {
-    Header,
-  },
-}
+
 </script>
 
 <style></style>
