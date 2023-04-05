@@ -3,9 +3,14 @@
 </template>
 
 <script>
+/**
+ * Decidement, je constate que tu est retourner a option API,
+ * pas grave, tu ne me diras pas que je ne t'ai pas prevenue
+ * poursuivons avec dans ce cas.
+ */
 import Dashbord from "./layout/Dashbord.vue";
 export default {
- 
+
   components: {
     Dashbord
   }

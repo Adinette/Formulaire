@@ -1,5 +1,4 @@
 <template>
-  
   <div class="result">
     <h1 class="text-xl font-medium">Result of Registration</h1>
     <h2>Username: {{ personne?.user_name }}</h2>
@@ -26,15 +25,17 @@ const personne = personneStore.getPersonne;
 console.log(personne);;
 </script>
 <style>
-h2{
+h2 {
   text-align: center;
 }
-p{
+
+p {
   text-align: center;
   font-size: large;
 }
-.result{
-  padding: 3rem ;
+
+.result {
+  padding: 3rem;
   margin-top: -4rem;
   width: 50rem;
   height: auto;
@@ -43,5 +44,4 @@ p{
   right: 10%;
   background-color: rgb(246, 240, 240);
 }
-
 </style>

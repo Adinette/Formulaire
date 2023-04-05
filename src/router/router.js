@@ -28,7 +28,13 @@ const router = createRouter({
         {
             path: '/acceuil', component: Acceuil
         },
-        
+
+        /**
+         * je vois que ici tu as fait de nouvelles importations, c'est bien
+         * d'apres ce que je vois, aucune erreur. Je considere que tu as compris cette partie.
+         * Je t'en prie garde bien en tete comment ca fonctionne parce que ce n'est qu'une partie en fait.
+         */
+
         {
             path: '/course', component: Course
         },
@@ -50,7 +56,6 @@ const router = createRouter({
         {
             path: '/Login', component: Login
         },
-        ,
     ]
 });
 
