@@ -1,21 +1,22 @@
 <template>
   <div class="nam">
     <ul>
+      
       <li><router-link to="/resultat" class="butt"> Consult my Registration</router-link></li>
       <li><router-link to="/course" class="butt"> Start my course</router-link></li>
     </ul>
-    <div class="label">
+    <form @submit.prevent="login" class="label">
       <div>
-        <label>E-Mail : </label>
-        <input type="email" class="input" id="email" v-model.trim="email">
+        <label for="email">E-Mail : </label>
+        <input type="email" class="input" id="email" v-model.trim="email" required>
       </div>
       <div>
-        <label>Password : </label>
-        <input type="password" id="password" class="input" v-model.trim="password">
+        <label for="password"> Password : </label>
+        <input type="password" id="password" class="input" v-model.trim="password" required>
       </div>
       <button class="submit" @click="submit">Login</button>
       <button mode="flat" class="submit" @click="authMode">Sign up instead</button>
-    </div>
+    </form>
 
   </div>
 </template>
@@ -28,22 +29,36 @@ import { ref } from 'vue';
  * Ici tu es encore repartie sur composition API, tu m'embrouilles !
  * Bref, quand tu utilises composition API, considere que tu ecris du javascript pure.
  * Donc dans le cas des variables que tu as declarer plus bas, tu doit le faire comme en Javascript
+ * let user = { email: 'example@example.com' };
+console.log(user.email);
+
+ login() {
+      // Envoyer la requête de connexion à votre serveur avec les données du formulaire
+      console.log('Email: ' + this.email);
+      console.log('Password: ' + this.password);
+      // Réinitialiser le formulaire
+      this.email = '';
+      this.password = '';
+    }
  */
 
-const email = ref('') //email:'' J'ai commenter ce que tu as fait et je te montre comment on fait.
+const email = ref(''); //email:'' J'ai commenter ce que tu as fait et je te montre comment on fait.
 //Ce sera pareil pour les autres donc pas besoins de commenter
-const password = ref('') //password: ''
-const mode = ref('login') //mode: 'login'
+const password = ref(''); //password: ''
+const mode = ref('login'); //mode: 'login'
 
 //Ici tu veux declarer une fonction asynchrone, regarde coment on fait
 
-const submit = async () => {
-
-  if (this.email === '' || !this.email.includes('@')
-    || this.password.lenght < 6
-  ) {
+const login = async () => {
+  if (email.value === '' || !email.value.includes('@')
+    || password.value.lenght < 6)
+   {
     return;
   }
+  console.log('Email: ' + email.value);
+  console.log('Password: ' + password.value);
+  email.value = '';
+  password.value = '';
   //actionPayload = () =>{
   //email:this.email;
   //password:this.password
