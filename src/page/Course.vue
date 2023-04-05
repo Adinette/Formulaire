@@ -13,23 +13,22 @@
     </body>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
 </script>
 
 <style>
-li{
+li {
     border-color: black;
     background-color: rgb(228, 216, 200);
-    
+
 }
+
 li:active,
-li:hover{
+li:hover {
     background-color: rgb(199, 189, 176);
 }
-body{
+
+body {
     background-color: rgb(249, 251, 250);
     display: block;
 }

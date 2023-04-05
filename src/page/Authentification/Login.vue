@@ -1,9 +1,8 @@
 <template>
   <div class="nam">
     <ul>
-      
-      <li><router-link to="/resultat" class="butt"> Consult my Registration</router-link></li>
-      <li><router-link to="/course" class="butt"> Start my course</router-link></li>
+      <li><router-link class="butt" to="/resultat"> Consult my Registration</router-link></li>
+      <li><router-link class="butt" to="/course"> Start my course</router-link></li>
     </ul>
     <form @submit.prevent="login" class="label">
       <div>
@@ -51,8 +50,7 @@ const mode = ref('login'); //mode: 'login'
 
 const login = async () => {
   if (email.value === '' || !email.value.includes('@')
-    || password.value.lenght < 6)
-   {
+    || password.value.lenght < 6) {
     return;
   }
   console.log('Email: ' + email.value);
@@ -141,7 +139,9 @@ li {
 
 .label {
   padding: 6rem;
-  margin-top: -4rem;
+  /*C'est a cause de cette partie, l'element qui a pour classe label cachait les bouttons meme si tu ne remarque pas.
+  Donc fait attention a ce genre de details aussi*/
+  /*margin-top: -4rem; C'EST A CAUSE DU MARGIN TOP*/
   width: 50rem;
   height: auto;
   position: absolute;
