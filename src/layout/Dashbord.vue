@@ -1,8 +1,13 @@
 <template>
-  <div class="p-2">
+  <header></header>
+  <div>
   <Header />
     <router-view></router-view>
   </div>
+  <footer>
+   
+  </footer>
+  
 </template>
 
 <script setup>

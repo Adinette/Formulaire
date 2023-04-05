@@ -1,11 +1,19 @@
 <template>
-  <div>Accueil</div>
+  <header>
+    <h1>Acceuil</h1>
+  </header>
+    
+  
 </template>
 
 <script script>
 </script>
 
 <style>
+h1{
+  font: size 10rem;
+  text-align: center;
+}
 li {
   text-decoration: none;
   list-style: none;
@@ -20,7 +28,10 @@ li {
   text-align: center;
 
 }
-
+.button{
+  font-size: x-large ;
+color: black;
+}
 #button:hover,
 #button:active {
   border-color: #002350;

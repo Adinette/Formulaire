@@ -3,7 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '../page/HelloWorld.vue'
 import Resultat from '../page/Resultat.vue'
 import Acceuil from '../page/Acceuil.vue'
-
+import Course from '../page/Course.vue'
+import HTML from '../page/HTML.vue'
+import CSS from '../page/CSS.vue'
+import JAVASCRIPT from '../page/JAVASCRIPT.vue'
+import LARAVEL from '../page/LARAVEL.vue'
+import ANGULAR from '../page/ANGULAR.vue'
+import Login from '../page/Authentification/Login.vue'
 
 
 const router = createRouter({
@@ -21,6 +27,28 @@ const router = createRouter({
         },
         {
             path: '/acceuil', component: Acceuil
+        },
+        
+        {
+            path: '/course', component: Course
+        },
+        {
+            path: '/HTML', component: HTML
+        },
+        {
+            path: '/CSS', component: CSS
+        },
+        {
+            path: '/JAVASCRIPT', component: JAVASCRIPT
+        },
+        {
+            path: '/LARAVEL', component: LARAVEL
+        },
+        {
+            path: '/ANGULAR', component: ANGULAR
+        },
+        {
+            path: '/Login', component: Login
         },
         ,
     ]
